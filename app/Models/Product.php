@@ -13,6 +13,7 @@ class Product extends Model
     use HasFactory;
 
     protected $with = ['type'];
+    protected $guarded= ['id'];
 
     public function orderDetails(): HasMany
     {
