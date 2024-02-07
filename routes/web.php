@@ -11,13 +11,21 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\DashboardController;
 use Inertia\Inertia;
 
 
 
 Route::middleware(['auth'])->group(function () {
-
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/products', [DashboardController::class, 'productList'])->name('dashboard-product');
+    Route::get('/dashboard/products/add', [ProductController::class, 'create'])->name('show-product-add');
+    Route::post('/dashboard/products/add', [ProductController::class, 'store'])->name('product-add');
+    Route::get('/dashboard/products/{product}/delete', [ProductController::class, 'destroy'])->name('product-delete');
+    Route::put('/dashboard/products/{product}/edit', [ProductController::class, 'edit'])->name('product-edit');
+
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/product/{product}', [ProductController::class, 'show']);
     Route::get('/search', [SearchController::class, 'index'])->name('search');
@@ -32,6 +40,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');
+    Route::get('/login-admin', [LoginController::class, 'showLoginAdmin'])->name('show-login-admin');
+    Route::post('/login-admin', [LoginController::class, 'loginAdmin'])->name('login-admin');
     Route::post('/login', [LoginController::class, 'authenticate']);
     Route::get('/register', [RegisterController::class, 'show'])->name('register');
     Route::post('/register', [RegisterController::class, 'register']);

@@ -4,6 +4,7 @@ type Product = {
     description: string;
     product_url: string;
     qty: number;
+    stock: number;
     price: number;
     type_id: number;
     type: TypeProduct;

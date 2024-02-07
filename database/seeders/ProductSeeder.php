@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
             'product_url' => 'https://pm1.narvii.com/6829/9377b1ae948d99a8df728f98c0c4366f34e3f6f6v2_hq.jpg',
             'price' => 500000,
             'type_id' => 1,
+            'stock' => 50
           ]);
         DB::table('products')->insert([
             'name' => 'Pumps',
@@ -27,6 +28,7 @@ class ProductSeeder extends Seeder
             'product_url' => 'https://i.etsystatic.com/17244981/r/il/d5664b/1736273156/il_fullxfull.1736273156_cj56.jpg',
             'price' => 800000,
             'type_id' => 1,
+            'stock' => 50
         ]);
         DB::table('products')->insert([
             'name' => 'Kicks',
@@ -34,6 +36,7 @@ class ProductSeeder extends Seeder
             'product_url' => 'https://i.pinimg.com/originals/c7/0b/57/c70b5784850f0fcf5304ca840d94b5fa.jpg',
             'price' => 300000,
             'type_id' => 1,
+            'stock' => 50
         ]);
         DB::table('products')->insert([
             'name' => 'Boots',
@@ -41,6 +44,7 @@ class ProductSeeder extends Seeder
             'product_url' => 'https://i.stpost.com/altimate-double-zipper-motorcycle-boots-leather-for-women-in-black~p~4144g_01~1500.3.jpg',
             'price' => 100000,
             'type_id' => 1, 
+            'stock' => 50
         ]);
         DB::table('products')->insert([
             'name' => 'Slippers',
@@ -48,6 +52,7 @@ class ProductSeeder extends Seeder
             'product_url' => 'https://thumbs.dreamstime.com/b/pair-warm-female-slippers-isolated-white-background-104884160.jpg',
             'price' => 100000,
             'type_id' => 1,
+            'stock' => 50
         ]);
 
         // JAM TANGAN
@@ -58,6 +63,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://thumbs.dreamstime.com/b/modern-mens-watch-white-background-studio-shot-sports-wrist-as-product-photography-isolated-129104125.jpg',
         'price' => 1500000,
         'type_id' => 4,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Smarto',
@@ -65,6 +71,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://image.shutterstock.com/shutterstock/photos/532756432/display_1500/stock-photo-wristwatch-isolated-on-white-background-532756432.jpg',
         'price' => 1000000,
         'type_id' => 4,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Casio',
@@ -72,6 +79,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX1955686.jpg',
         'price' => 500000,
         'type_id' => 4,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Rolex',
@@ -79,6 +87,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://thumbs.dreamstime.com/b/watch-modern-white-background-32633925.jpg',
         'price' => 500000000,
         'type_id' => 4,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Swatch',
@@ -86,6 +95,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://www.meitalstudios.com/wp-content/uploads/2020/05/best-white-background-watches-photographer.jpg',
         'price' => 250000,
         'type_id' => 4,
+        'stock' => 50
     ]);
 
     // KACA MATA
@@ -96,6 +106,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://purepng.com/public/uploads/large/purepng.com-glassesglasseseyeglassesspectaclesplastic-lensesmounted-14215264993951jk1l.png',
         'price' => 1500000,
         'type_id' => 5,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Oakley',
@@ -103,6 +114,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://freepngimg.com/thumb/glasses/27-glasses-png-image.png',
         'price' => 1000000,
         'type_id' => 5,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Gucci',
@@ -110,6 +122,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://img.ebdcdn.com/product/frame/white/mt7364_1.jpg?im=Resize,width=280,height=140,aspect=fill;UnsharpMask,sigma=1.0,gain=1.0&q=85%20240w,%20https://img.ebdcdn.com/product/frame/white/mt7364_1.jpg?im=Resize,width=360,height=180,aspect=fill;UnsharpMask,sigma=1.0,gain=1.0&q=85%20360w,%20https://img.ebdcdn.com/product/frame/white/mt7364_1.jpg?im=Resize,width=600,height=300,aspect=fill;UnsharpMask,sigma=1.0,gain=1.0&q=85%20600w',
         'price' => 3000000,
         'type_id' => 5,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Zenni',
@@ -117,6 +130,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://pngimg.com/uploads/glasses/glasses_PNG58.png',
         'price' => 250000,
         'type_id' => 5,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Snapchat',
@@ -124,6 +138,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://i.pinimg.com/736x/bf/b4/62/bfb462aa95720fcb94a2a3f95d28706c--pure-white-eyeglasses.jpg',
         'price' => 2000000,
         'type_id' => 5,
+        'stock' => 50
     ]);
     
     // Tipe produk: Tas
@@ -132,7 +147,8 @@ class ProductSeeder extends Seeder
         'description' => 'Tas ransel yang luas dan nyaman, dengan bahan kanvas dan banyak kantong. Tas ini memiliki tali yang empuk dan dapat disesuaikan, serta resleting yang kuat dan mudah dibuka.',
         'product_url' => 'https://mockupsjar-production.s3-eu-west-1.amazonaws.com/renders/tote-bag-with-background-AliJnp4CQMViO7Bt.jpg',
         'price' => 300000,
-        'type_id' => 3
+        'type_id' => 3,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Handbag',
@@ -140,6 +156,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://www.thefashiontamer.com/wp-content/uploads/2019/03/white-handbags-5.jpg',
         'price' => 500000,
         'type_id' =>3, 
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Duffel',
@@ -147,6 +164,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://www.allfashionbags.com/wp-content/uploads/2017/05/White-Shoulder-Bag-Photos.jpg',
         'price' => 400000,
         'type_id' => 3, 
+        'stock' => 50
     ]);
 
     DB::table('products')->insert([
@@ -154,7 +172,8 @@ class ProductSeeder extends Seeder
         'description' => 'Tas genggam yang kecil dan cantik, dengan bahan sutra dan manik-manik. Tas ini memiliki pegangan yang halus dan rantai yang dapat dilepas, serta kancing gesper yang menawan dan elegan.',
         'product_url' => 'https://3.bp.blogspot.com/-3AelpriI9B0/VZAepGcZStI/AAAAAAAASbk/UiomWnMDF_w/s1600/louis-vuitton-mahina-leather-solar-gm-white-women-shoulder-bags-and-totes.jpg',
         'price' => 250000,
-        'type_id' => 3
+        'type_id' => 3,
+        'stock' => 50
     ]);
 
     DB::table('products')->insert([
@@ -162,7 +181,8 @@ class ProductSeeder extends Seeder
         'description' => 'Tas selempang yang simpel dan klasik, dengan bahan denim dan patchwork. Tas ini memiliki tali yang panjang dan dapat disesuaikan, serta kancing tekan yang mudah dan cepat.',
         'product_url' => 'https://cdna.lystit.com/photos/0d2b-2015/12/19/coach-chalk-edie-studded-leather-shoulder-bag-white-product-1-093650221-normal.jpeg',
         'price' => 200000,
-        'type_id' =>3
+        'type_id' =>3,
+        'stock' => 50
     ]);
     
 
@@ -172,6 +192,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://www.80scasualclassics.co.uk/images/adidas-originals-trefoil-t-shirt-green-p10660-65092_image.jpg',
         'price' => 100000,
         'type_id' => 2,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Blouse',
@@ -179,6 +200,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://i5.walmartimages.com/asr/38ea6606-e5a2-4d29-9ae5-2952d7173b8b_1.44e5c3267324f91822dda55e193abed7.jpeg',
         'price' => 150000,
         'type_id' => 2,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Shirt',
@@ -186,6 +208,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://i.pinimg.com/originals/dc/62/b3/dc62b35bef6b7a0ab00cdd6254c2eec5.jpg',
         'price' => 200000,
         'type_id' => 2,
+        'stock' => 50
     ]);
     DB::table('products')->insert([
         'name' => 'Sweater',
@@ -193,6 +216,7 @@ class ProductSeeder extends Seeder
         'product_url' => 'https://www.seoclerk.com/pics/000/763/212/0a0c4c9428b23836d1b2595516adfb0f.jpg',
         'price' => 250000,
         'type_id' => 2,
+        'stock' => 50
     ]);
 
 } }

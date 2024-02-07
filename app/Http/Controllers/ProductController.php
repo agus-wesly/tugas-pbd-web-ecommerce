@@ -23,7 +23,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('ProductAdd', [
+        ]);
+
     }
 
     /**
@@ -70,6 +72,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Product::destroy($product->id);
+        return to_route('dashboard-product');
     }
 }

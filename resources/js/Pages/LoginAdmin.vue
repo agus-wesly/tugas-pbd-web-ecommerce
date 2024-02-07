@@ -1,21 +1,11 @@
 <script setup>
+import { cn } from "@/lib/utils";
 import { ref } from "vue";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link, useForm } from "@inertiajs/vue3";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-
-defineProps({
-    flash: {
-        message: {
-            default: "",
-            type: String,
-        },
-    },
-});
 
 const isSubmitting = ref(false);
 
@@ -28,22 +18,14 @@ async function onSubmit(event) {
     event.preventDefault();
     isSubmitting.value = true;
 
-    form.post("/login");
+    form.post("/login-admin");
     isSubmitting.value = false;
 }
 </script>
 
 <template>
     <main class="container mt-10 max-w-xl">
-        <h1 class="mb-10 text-3xl font-[900] text-center">
-            Login to your account
-        </h1>
-        <Alert v-if="flash.message" variant="destructive" class="mb-5">
-            <AlertTitle class="text-sm">Error</AlertTitle>
-            <AlertDescription class="text-xs">
-                {{ flash.message }}
-            </AlertDescription>
-        </Alert>
+        <h1 class="mb-10 text-3xl font-[900] text-center">Login admin</h1>
         <div :class="cn('grid gap-6', $attrs.class ?? '')">
             <form @submit.prevent="onSubmit">
                 <fieldset :disabled="isSubmitting" class="grid gap-4">
@@ -77,24 +59,6 @@ async function onSubmit(event) {
                     <Button type="submit"> Sign In </Button>
                 </fieldset>
             </form>
-
-            <span class="bg-background px-2 text-muted-foreground text-sm">
-                Belum punya akun ?
-                <Link
-                    href="/register"
-                    class="font-bold text-neutral-800 underline"
-                    >Register sekarang</Link
-                >
-            </span>
-
-            <span class="bg-background px-2 text-muted-foreground text-sm">
-                atau
-                <Link
-                    href="/login-admin"
-                    class="font-bold text-neutral-800 underline"
-                    >Login admin</Link
-                >
-            </span>
         </div>
     </main>
 </template>
