@@ -36,7 +36,8 @@ const form = useForm({});
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead class="w-[100px]">ID</TableHead>
+                        <TableHead class="">ID</TableHead>
+                        <TableHead class="w-[100px]">Gambar</TableHead>
                         <TableHead>Nama</TableHead>
                         <TableHead>Harga</TableHead>
                         <TableHead>Stok</TableHead>
@@ -48,6 +49,12 @@ const form = useForm({});
                         <TableCell class="font-medium">{{
                             product.id
                         }}</TableCell>
+                        <TableCell>
+                            <img
+                                class="w-20 h-20 object-cover"
+                                :src="product.product_url"
+                            />
+                        </TableCell>
                         <TableCell>{{ product.name }}</TableCell>
                         <TableCell>{{ product.price }}</TableCell>
                         <TableCell>{{ product.qty }}</TableCell>

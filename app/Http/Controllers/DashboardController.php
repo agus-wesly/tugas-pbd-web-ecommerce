@@ -18,7 +18,7 @@ class DashboardController extends Controller
     }
 
     public function productList() {
-        $products = Product::all();
+        $products = Product::orderBy('created_at', 'asc')->get();
 
         return Inertia::render('DashboardProduct', [
             'products' => $products,

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+
 
 
 class ProductController extends Controller
@@ -37,10 +39,14 @@ class ProductController extends Controller
             'name' => 'required|min:2|max:255' ,
             'description' => 'required|min:5|max:255' ,
             'stock' => 'required|integer|min:5|max:255' ,
-            'product_url' => 'required|min:5|max:255' ,
             'price' => 'required|integer|min:5' ,
             'type_id' => 'required|integer' 
         ]);
+
+        if($request->file('product_url')) {
+            $uploadedFileUrl = Cloudinary::upload($request->file('product_url')->getRealPath())->getSecurePath();
+            $productData['product_url'] = $uploadedFileUrl;
+        }
 
         Product::create($productData);
         return to_route('dashboard-product');

@@ -26,7 +26,7 @@ let productSrc = computed(() => {
 function onSubmit() {
     form.transform((data) => ({
         ...data,
-        product_url: "blablablab",
+        product_url: tempFilePofile.value,
     })).post("/dashboard/products/add");
 }
 
