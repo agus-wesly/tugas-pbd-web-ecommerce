@@ -34,12 +34,14 @@ function handleButtonProductClick() {
                 <h1 class="font-bold text-xl text-[#333]">
                     {{ product.name }}
                 </h1>
+                <p>Stok : {{ product.stock }}</p>
                 <h3 class="font-semibold text-md text-[#333]">
                     Rp. {{ product.price }}
                 </h3>
 
                 <div class="space-x-4">
                     <Button
+                        :disabled="product.stock < 1"
                         @click="handleButtonProductClick"
                         :variant="productInCart ? 'destructive' : ''"
                         >{{

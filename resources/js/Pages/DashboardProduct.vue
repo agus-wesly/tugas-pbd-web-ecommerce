@@ -57,7 +57,7 @@ const form = useForm({});
                         </TableCell>
                         <TableCell>{{ product.name }}</TableCell>
                         <TableCell>{{ product.price }}</TableCell>
-                        <TableCell>{{ product.qty }}</TableCell>
+                        <TableCell>{{ product.stock }}</TableCell>
                         <TableCell class="text-end">
                             <div class="space-x-2">
                                 <Button variant="outline">

@@ -26,6 +26,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/products/{product}/delete', [ProductController::class, 'destroy'])->name('product-delete');
     Route::put('/dashboard/products/{product}/edit', [ProductController::class, 'edit'])->name('product-edit');
 
+
+    Route::post('/order/{order}', [OrderController::class, 'update'])->name('update-order');
+
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/product/{product}', [ProductController::class, 'show']);
     Route::get('/search', [SearchController::class, 'index'])->name('search');

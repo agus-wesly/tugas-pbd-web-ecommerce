@@ -9,7 +9,8 @@ use App\Models\Order;
 class DashboardController extends Controller
 {
     public function index() {
-        $orders = Order::all();
+        $orders = Order::with('user')->orderBy('created_at', 'desc')->get();
+        
 
         return Inertia::render('Dashboard', [
             'orders' => $orders

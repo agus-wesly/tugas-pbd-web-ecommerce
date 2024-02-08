@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
 use App\Models\OrderDetail;
+use App\Models\Order;
+use App\Models\Product;
 
 class OrderController extends Controller
 {
@@ -17,7 +19,7 @@ class OrderController extends Controller
                     'type:id,name'
                 ],
             ],
-        ])->get();
+        ])->orderBy('created_at', 'desc')->get();
 
 
         return Inertia::render('Order', [
@@ -52,6 +54,21 @@ class OrderController extends Controller
 
         return to_route('show-order')->with('message', 'ordered');
        
+    }
+
+
+    public function update(Order $order, Request $request) {
+        // dd('ok');
+        $order->status = 'S';
+        
+        // dd($order->orderDetails()->get());
+        foreach($order->orderDetails()->get() as $orderDetails) {
+            $product = Product::find($orderDetails->product_id);
+            $product->stock = $product->stock - $orderDetails->quantity;
+            $product->save();
+        }
+        $order->save();
+        return to_route('dashboard');
     }
 
     public function delete(Request $request) {

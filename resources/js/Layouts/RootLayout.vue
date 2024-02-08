@@ -63,7 +63,7 @@ function handleSearch() {
     <footer
         class="container max-w-3xl py-4 border-t mb-4 font-semibold flex justify-between items-center"
     >
-        <p>© Agus Wesly 2023. All rights reserved</p>
+        <p></p>
 
         <a
             href="https://github.com/agus-wesly/uts-laravel-ecommerce-app"

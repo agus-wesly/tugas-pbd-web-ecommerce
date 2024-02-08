@@ -36,6 +36,7 @@ function handleClickProduct() {
         <div class="flex justify-between items-center mt-3">
             <p class="font-bold w-fit text-xs">Rp. {{ product.price }}</p>
             <Button
+                :disabled="product.stock < 1"
                 @click="handleClickProduct"
                 :variant="productIsInCart ? 'destructive' : 'outline'"
                 class="text-xs py-2 h-fit"

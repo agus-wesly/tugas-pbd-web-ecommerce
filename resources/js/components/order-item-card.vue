@@ -35,6 +35,7 @@ let orderDate = computed(() => {
                 Cetak pesanan
             </a>
             <Button
+                :disabled="order.status === 'S'"
                 @click="() => $emit('showModal', order.id)"
                 class="text-xs h-min"
                 variant="destructive"
@@ -74,7 +75,12 @@ let orderDate = computed(() => {
                 </p>
                 <div class="flex-1 font-semibold">
                     <p
-                        class="bg-yellow-200 text-yellow-800 rounded-full p-1 w-8 h-8 flex items-center justify-center"
+                        class="rounded-full p-1 w-8 h-8 flex items-center justify-center"
+                        :class="{
+                            'bg-yellow-200 text-yellow-800':
+                                order.status === 'P',
+                            'bg-green-200 text-green-800': order.status === 'S',
+                        }"
                     >
                         {{ order.status }}
                     </p>
