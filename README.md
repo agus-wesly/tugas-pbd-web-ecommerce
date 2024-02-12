@@ -19,11 +19,11 @@
 #### Clone Repo
 
 ```
-git clone git@github.com:agus-wesly/uts-laravel-ecommerce-app.git laravel-my-ecommerce
+git clone git@github.com:agus-wesly/tugas-pbd-web-ecommerce.git
 ```
 
 ```
-cd laravel-my-ecommerce
+cd tugas-pbd-web-ecommerce
 ```
 
 #### Install dependencies
@@ -88,3 +88,8 @@ npm run dev
 ```
 http://127.0.0.1:8000
 ```
+
+### Untuk login admin dapat menggunakan credential berikut :
+
+Email : admin@gmail.com
+Password: password
